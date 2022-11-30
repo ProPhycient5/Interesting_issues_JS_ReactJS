@@ -10,3 +10,10 @@ While both regular JavaScript functions and arrow functions work in a similar ma
     fun(1,2,3);
     //error
     ```
+   - `this` keyword cannot be used properly. That means `this` refers to the global object outside of the function context.
+
+-  **Regular function**
+  - It may or may not be anonymous function.
+  - It can be hoisted on the top of the scope because it is function declaration with contrast to function expression(in case of *arrow function*).
+  - `this` and `arguments` keywords are used smoothly.
+   
