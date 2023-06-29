@@ -2,25 +2,25 @@
 
 
 
-1. In the following code, the EmailComponent is invoked as a regular function instead of being used as a JSX component. To correct this, we need to use 
-   angle brackets (<EmailComponent />) to render the EmailComponent as a JSX component. But why? 🤔
+1. In the following code, the `EmailComponent` is invoked as a regular function instead of being used as a JSX component. To correct this, we need to use 
+   angle brackets (`<EmailComponent /`>) to render the `EmailComponent` as a JSX component. But why? 🤔
 
-2. When we invoke the component as a regular function, we merged App and EmailComponent into a single supercomponent and turned the email field into a custom hook.
+2. When we invoke the component as a regular function, we merged `App` and `EmailComponent` into a single supercomponent and turned the email field into a custom hook.
 
-3. However, this approach causes unnecessary re-rendering of the App component whenever the EmailComponent updates. This violates the encapsulation of re-render 
+3. However, this approach causes unnecessary re-rendering of the `App` component whenever the `EmailComponent` updates. This violates the `encapsulation of re-render` 
    principle (one reason 🟢).
 
-4. In ReactJS, the encapsulation of re-render refers to the behavior where the rendering of components is optimized to only update the necessary parts of the user interface.
-   This means that when a component's state or props change, React will intelligently determine which parts of the UI need to be updated and only update those 
+4. In ReactJS, the `encapsulation of re-render` refers to the behavior where the rendering of components is optimized to only update the necessary parts of the user 
+   interface. This means that when a component's state or props change, React will intelligently determine which parts of the UI need to be updated and only update those 
    specific parts, rather than re-rendering the entire component.
 
-5. The app crashes because when the App is initially loaded, there is one hook. However, when the user checks the checkbox, the App has two hooks in the condition 
+5. The app crashes because when the `App` is initially loaded, there is one hook. However, when the user checks the checkbox, the `App` has two hooks in the condition 
    while rendering, which throws an error as Rendered more hooks than during the previous render (2nd reason 🟢).
 
-6. Moreover, when the EmailComponent is invoked as a regular function, React doesn't recognize it as a component instance and cannot manage its lifecycle or state properly. 
-   This leads to unexpected behavior and issues when working with component states, hooks, and lifecycle methods.
+6. Moreover, when the `EmailComponent` is invoked as a regular function, React doesn't recognize it as a component instance and cannot manage its lifecycle or state 
+   properly. This leads to unexpected behavior and issues when working with component states, hooks, and lifecycle methods.
 
-7. We can fix this issue by using JSX syntax <EmailComponent /> ✌🏽.
+7. We can fix this issue by using JSX syntax `<EmailComponent />` ✌🏽.
 
 ```
 import "./styles.css";
