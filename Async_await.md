@@ -1,7 +1,6 @@
-async await.
+`async await`.
 
-//async function always return a promise, even if we return string, boolean, number or any data type.
-It will be wrapped within a promise.
+### async function always return a promise, even if we return string, boolean, number or any data type. It will be wrapped within a promise.
 
 Ex:
 ```
@@ -13,8 +12,7 @@ async function getData(){
 const dataPromise = getData();
 dataPromise.then((res) => console.log(res));
 
-//async-await is used to handle promises.
-// await can only be used inside an async function
+### async-await is used to handle promises.cawait can only be used inside an async function
 
 ```
 const p = new Promise((resolve, reject) => {
@@ -23,11 +21,10 @@ const p = new Promise((resolve, reject) => {
 }, 10000)
 });
 ```
-
+### JS Engine appears to be waiting for promise to be fulfilled. Actually the async func gets suspended poped out of callstack until it is resolved or rejected. Then JS excution works later that line.
 ```
 async function handlePromise(){
-// JS Engine appears to be waiting for promise to be fulfilled. Actually the async func gets suspended
-// poped out of callstack until it is resolved or rejected. Then JS excution works later that line.
+
  const val = await p;
  console.log("Nameste JavaScript");
  console.log(val); 
@@ -36,4 +33,4 @@ async function handlePromise(){
 handlePromise();
 ```
 
-`async` is the keyword used before function and `await` is used inside the async func to handle the promises.
+### `async` is the keyword used before function and `await` is used inside the async func to handle the promises.
