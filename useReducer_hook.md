@@ -11,6 +11,9 @@
 | singleValue = reduce(accumulator, itemValue) | newState = reducer(currentStatem, action) |
 | `reduce` method return a single value | `useReducer` return a pair of values `[newState, dispatch]` |
 
-##### Action is the instruction of the reducer function.
+- ##### Action is the instruction of the reducer function.
 
-##### The [following link](https://codesandbox.io/s/usereducer-hook-w9qqtg) is the demonstration of implementation of simple `useReducer` hook.
+- ##### This [link](https://codesandbox.io/s/usereducer-hook-w9qqtg?file=/src/components/CounterOne.jsx) is the demonstration of implementation of simple `useReducer` hook.
+
+- ##### Then I experimented `useReducer` hook with the initial and action as objects. The benefits of this approach is that, we can handle multiple counters and use dynamic value from the user-end.
+- ##### The above point is evident from the following [code](https://codesandbox.io/s/usereducer-hook-w9qqtg?file=/src/components/CounterTwo.jsx).
